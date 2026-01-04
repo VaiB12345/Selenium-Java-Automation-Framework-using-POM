@@ -1,0 +1,62 @@
+// ---------- BaseClass.java ----------
+public void login(String user, String pass) {
+driver.findElement(loginLink).click();
+driver.findElement(email).sendKeys(user);
+driver.findElement(password).sendKeys(pass);
+driver.findElement(loginBtn).click();
+}
+}
+
+
+// ---------- HomePage.java ----------
+package pages;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class HomePage {
+WebDriver driver;
+
+
+By searchBox = By.id("small-searchterms");
+By searchBtn = By.xpath("//input[@value='Search']");
+
+
+public HomePage(WebDriver driver) {
+this.driver = driver;
+}
+
+
+public void searchProduct(String product) {
+driver.findElement(searchBox).sendKeys(product);
+driver.findElement(searchBtn).click();
+}
+}
+
+
+// ---------- AddToCartPage.java ----------
+package pages;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+
+public class AddToCartPage {
+WebDriver driver;
+
+
+By addToCartBtn = By.xpath("//input[@value='Add to cart']");
+
+
+public AddToCartPage(WebDriver driver) {
+this.driver = driver;
+}
+
+
+public void addToCart() {
+driver.findElement(addToCartBtn).click();
+}
+}
