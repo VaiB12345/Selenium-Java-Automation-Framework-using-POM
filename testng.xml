@@ -1,0 +1,12 @@
+// ---------- testng.xml ----------
+/*
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Automation Suite">
+<test name="Ecommerce Tests">
+<classes>
+<class name="testcases.LoginTest" />
+<class name="testcases.SearchAndAddToCartTest" />
+</classes>
+</test>
+</suite>
+*/
